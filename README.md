@@ -80,7 +80,7 @@ if (LOW == digitalRead(_pin.Button(R)) {
 
 
 
-설치
+Installation
 ------------------
 
 #### Windows 
@@ -146,6 +146,8 @@ JellibiPos 열거자는 JellibiPin 클래스의 메서드에서 인자로 사용
 ```R``` 은 "Right" 의 의미로 '오른쪽' 버튼, '오른쪽' Ir 센서, '오른쪽' 서보모터 포트를 가져올 때 인자로 사용합니다. 
 ```C``` 는 "Center" 의 의미로 젤리비 센서보드의 '가운데'  Ir센서와 연결된 포트를 가져올 때 인자로 사용합니다. 
 
+
+
 ### JellibiPin 클래스 
 
 #### Method
@@ -168,6 +170,8 @@ const int Button (JellibiPos pos);
 >```JellibiPos::L``` : 'Left' 버튼의 포트 응답
 >```JellibiPos::R``` : 'Right' 버튼의 포트 응답
 
+
+
 ```c++
 const int Wheel(JellibiPos pos);
 ```
@@ -182,6 +186,8 @@ const int Wheel(JellibiPos pos);
 >
 > ```JellibiPos::R``` : 오른쪽 모터의 회전속도 제어 포트 응답
 > ```JellibiPos::L``` : 왼쪽 모터의 회전속도 제어 포트 응답 
+
+
 
 ```c++ 
 const int WheelDir(JellibiPos pos);
@@ -198,6 +204,8 @@ const int WheelDir(JellibiPos pos);
 > ```JellibiPos::R``` : 오른쪽 모터의 회전방향 제어 포트 응답 
 > ```JellibiPos::L``` : 왼쪽 모터의 회전방향 제어 포트 응답
 
+
+
 ```c++
 const int Servo(JPos pos);
 ```
@@ -212,6 +220,8 @@ const int Servo(JPos pos);
 >
 > ```JellibiPos::L``` : 왼쪽 서보 제어 포트인  ```Servo 01``` 포트 응답
 > ```JellibiPos::R``` : 오른쪽 서보 제어 포트인 ```Servo 02``` 포트 응답
+
+
 
 ```c++
 const int Ir(JellibiPos pos);
@@ -231,6 +241,8 @@ const int Ir(JellibiPos pos);
 > ```JellibiPos::R``` : 젤리비모바일 보드 또는 센서보드의 오른쪽 IR 센서와 연결된 포트 응답 
 > ```JellibiPos::C``` : 젤리비센서보드의 가운데 IR 센서와 연결된 포트 응답 
 
+
+
 ```c++
 const int Led(JellibiPos pos);
 ```
@@ -248,6 +260,8 @@ const int Led(JellibiPos pos);
 > ```JellibiPos::R``` : 젤리비보드의 오른쪽 LED 와 연결된 포트 응답
 > ```JellibiPos::C``` : 젤리비보드의 가운데 LED 와 연결된 포트 응답 
 
+
+
 ```c++
 const int Cds();
 ```
@@ -255,6 +269,8 @@ const int Cds();
 ##### Description
 
 젤리비보드의 CDS 센서와 연결된 포트를 응답합니다. 
+
+
 
 ```c++
 const int Buzzer();
