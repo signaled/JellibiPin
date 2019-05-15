@@ -1,7 +1,21 @@
 "JellibiPin" class for Jellibi
 ===============
 
+ [코드크런치 까페(네이버)](https://cafe.naver.com/codecrunch)   
 
+ <TABLE>
+ <TR><TD nowrap>
+     <a href="https://smartstore.naver.com/robotnmore" target=new>
+         <img src="https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fwww.robotnmore.com%2Fdownload%2Fcodecrunch%2Fcafe_door_20190225_01.jpg%22&type=cafe_wa740">
+     </a>    
+     <a href="https://www.facebook.com/codecrunch.official/" target=new>
+     <img src="https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fwww.robotnmore.com%2Fdownload%2Fcodecrunch%2Fcafe_door_20190225_02.jpg%22&type=cafe_wa740">
+     </a>
+     <a href="https://www.instagram.com/codecrunch.official/" target=new>
+     <img src="https://dthumb-phinf.pstatic.net/?src=%22http%3A%2F%2Fwww.robotnmore.com%2Fdownload%2Fcodecrunch%2Fcafe_door_20190225_03.jpg%22&type=cafe_wa740">
+     </a>
+     </TD></TR>
+ </TABLE>
 
 아두이노 나노와 호환되는 젤리비보드에는 네개의 버튼, 부져 및 몇 개의 켜고 끌 수 있는 LED 가 있습니다. 
 그리고 그리퍼를 움직이는 두개의 서보모터를 연결할 수 있고 젤리비로봇으로는 DC 모터도 연결할 수 있습니다. 
