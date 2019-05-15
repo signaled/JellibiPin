@@ -1,41 +1,24 @@
 "JellibiPin" class for Jellibi
 ===============
 
-Contents
-----------
-- [JellibiPin](#JellibiPin)
-- [설치](#installation)
-    - [Windows](#windows) 
-    - [Linux] (TBD)
-    - [Mac] (TBD)
-- [사용방법](#userguide)
-    - [General Usage]
-    - [Example](#example)
 
 
-
-JellibiPin
------------
-
-젤리비보드는 아두이노 나노와 호환되는 보드입니다.
-
-젤리비보드에는 네개의 버튼, 부져 및 몇 개의 켜고 끌 수 있는 LED 가 있습니다. 
+아두이노 나노와 호환되는 젤리비보드에는 네개의 버튼, 부져 및 몇 개의 켜고 끌 수 있는 LED 가 있습니다. 
 그리고 그리퍼를 움직이는 두개의 서보모터를 연결할 수 있고 젤리비로봇으로는 DC 모터도 연결할 수 있습니다. 
 
 이러한 동작을 문제없이 해내기 위해서 부품들이 젤리비 보드와 어떻게 연결 해야되는지 미리 정해두었습니다. 
 JellibiPin 클래스는 이 연결정보를 편리하게 사용할 수 있게 도와줍니다.
 
-버튼이 눌렸는지 알아보기 위해
-아래와 같은 아두이노 코드를 작성하였습니다. 
+버튼이 눌렸는지 알아보기 위해 아래와 같은 아두이노 코드를 작성하였습니다. 
 
-```c++
+```cpp
  if (LOW == digitalRead(A0)) {
    Serial.print("Button Pushed");
  }
 ```
-이 라이브러리를 사용하게 되면 위 코드는 아래 예처럼 작성됩니다. 
+**"JellibiPin"** 라이브러리를 사용하게 되면 위 코드는 아래 예처럼 작성됩니다. 
 
-```c++
+```cpp
 JellibiPin _pin 
 
 if (LOW == digitalRead(_pin.Button(R)) {
@@ -44,15 +27,12 @@ if (LOW == digitalRead(_pin.Button(R)) {
 ```
 두 코드의 차이점은 가독성(Readability) 에 있습니다. 
 
-첫번째 코드는 ```A0 가 LOW 로 가 있는지 검사``` 로 이해 되지만 
-
+첫번째 코드는 ```A0 가 LOW 로 가 있는지 검사``` 로 이해 되지만    
 두번째 코드는 ```오른쪽(R) 버튼이 눌려(LOW) 있는지 검사``` 로 이해 할 수 있습니다. 
 
 이러한 차이로 인해서 긴 코드나 다른 사람이 작성한 코드를 읽을 때 가독성을 개선할 수 있습니다.
 
-
-
-아래는 JellibiPin 코드에서 사용할 수 있는 젤리비보드의 핀 정보입니다.
+아래는 JellibiPin 라이브러리에서 사용할 수 있는 젤리비보드의 핀(포트) 정보입니다.
 
 
 
@@ -92,35 +72,18 @@ Installation
 
 1. 라이브러리 다운로드하기 
 
-> a. JellibiPin 깃허브(https://github.com/signaled/JellibiPin) 에서 라이브러리를 다운로드 합니다. 
->
-> b. 깃허브의 [<>Code] 탭에서 [Clone or download] 버튼을 눌러 전체 소스코드를 "zip" 파일로 다운로드 합니다.
-> ![Download JellibiPin Library](http://www.robotnmore.com/matthew/jellibipin/download_button.png)
->
->
+   1. 웹브라우져에서 **JellibiPin** 라이브러리의 깃허브(https://github.com/signaled/JellibiPin)로  이동합니다.
+   2. 깃허브의 Code 탭에서 [Clone or download] 버튼을 눌러 "zip" 파일로 다운로드를 선택합니다.   
+      ![Download](http://www.robotnmore.com/matthew/jellibibutton/download_button.png)
 
-2. 라이브러리 가져오기 
+2. **JellibiPin** 라이브러리 적용하기 
 
-> a. 컴퓨터에서 아두이노 프로그램을 실행합니다. 
->
-> b. 아두이노의 메뉴 중 "스케치 > 라이브러리 포함하기 > .ZIP 라이브러리 추가" 를 선택합니다. 
-> ![Import](http://www.robotnmore.com/matthew/jellibibutton/import_ziplib.png)
->
-> c. 파일 선택 창에서 다운로드 받은 JellibiPin-master.zip 을 선택합니다. 
->
-> d. 다시 아두이노의 "스케치 > 라이브러리 포함하기" 를 선택하면 JellibiPin-master 항목이 메뉴에 표시됩니다. 
->![Select](http://www.robotnmore.com/matthew/jellibibutton/import_jellibibuttonclass.png)
-> e. 'JellibiPin-master' 를 선택합니다.
+   1. 아두이노 프로그램을 실행합니다.
+   2. **메뉴 > 스케치 > 라이브러리 포함하기 > .ZIP 라이브러리 추가** 를 선택합니다. 
+   3. 파일 선택 창에서 다운로드 받은 JellibiPin-master.zip 을 선택합니다.
+   4. **메뉴 > 스케치 > 라이브러리 포함히기 > JellibiPin-master** 를 선택합니다. 
 
-#### Linux 
-(TBD)
-
-#### Mac (OS X)
-(TBD) 
-
-
-사용방법
-------------
+   
 
 JellibiPin 라이브러리는 JellibiPin 클래스와 JellibiPos 열거자로 구성됩니다.  
 
@@ -149,11 +112,15 @@ JellibiPos 열거자는 JellibiPin 클래스의 메서드에서 인자로 사용
 ```R``` 은 "Right" 의 의미로 '오른쪽' 버튼, '오른쪽' Ir 센서, '오른쪽' 서보모터 포트를 가져올 때 인자로 사용합니다.  
 ```C``` 는 "Center" 의 의미로 젤리비 센서보드의 '가운데'  Ir센서와 연결된 포트를 가져올 때 인자로 사용합니다.   
 
+---
+
 
 
 ### JellibiPin 클래스 
 
 #### Method
+
+---
 
 ```c++
 const int Button (JellibiPos pos);
@@ -175,6 +142,8 @@ const int Button (JellibiPos pos);
 
 
 
+---
+
 ```c++
 const int Wheel(JellibiPos pos);
 ```
@@ -191,6 +160,8 @@ const int Wheel(JellibiPos pos);
 > ```JellibiPos::L``` : 왼쪽 모터의 회전속도 제어 포트 응답   
 
 
+
+---
 
 ```c++ 
 const int WheelDir(JellibiPos pos);
@@ -209,8 +180,10 @@ const int WheelDir(JellibiPos pos);
 
 
 
+---
+
 ```c++
-const int Servo(JPos pos);
+const int Servo(JellibiPos pos);
 ```
 
 ##### Descriptoin
@@ -225,6 +198,8 @@ const int Servo(JPos pos);
 > ```JellibiPos::R``` : 오른쪽 서보 제어 포트인 ```Servo 02``` 포트 응답
 
 
+
+---
 
 ```c++
 const int Ir(JellibiPos pos);
@@ -246,6 +221,8 @@ const int Ir(JellibiPos pos);
 
 
 
+---
+
 ```c++
 const int Led(JellibiPos pos);
 ```
@@ -265,6 +242,8 @@ const int Led(JellibiPos pos);
 
 
 
+---
+
 ```c++
 const int Cds();
 ```
@@ -274,6 +253,8 @@ const int Cds();
 젤리비보드의 CDS 센서와 연결된 포트를 응답합니다. 
 
 
+
+---
 
 ```c++
 const int Buzzer();
