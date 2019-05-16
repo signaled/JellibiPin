@@ -1,7 +1,7 @@
 #ifndef __JELLIBIPIN_H__
 #define __JELLIBIPIN_H__
 
-#include <arduino.h>
+#include <Arduino.h>
 enum JellibiPos
 {
     U = 0, // UP
